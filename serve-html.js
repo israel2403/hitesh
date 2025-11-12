@@ -133,7 +133,7 @@ const server = http.createServer((req, res) => {
 
     // If path is a directory, try index.html; otherwise show listing
     if (fs.existsSync(absPath) && fs.statSync(absPath).isDirectory()) {
-      const indexFile = path.join(absPath, '01_intro.html');
+      const indexFile = path.join(absPath, 'index.html');
       if (fs.existsSync(indexFile)) {
         return sendFile(res, indexFile);
       }
